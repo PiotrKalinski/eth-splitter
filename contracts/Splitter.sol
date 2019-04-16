@@ -30,29 +30,30 @@ contract Splitter {
        require(_bob != address(0x0));
        require(_carol != address(0x0));
        owner = msg.sender;
-       recipients[0].balance = 0;
-       recipients[1].balance = 0;
+
        recipients[0].holder = _bob;
        recipients[1].holder = _carol;
    }
 
    function sendEther() public validEtherSend payable {
-       uint amount = msg.value;
-       if (amount % 2 == 0) {
+       if (msg.value % 2 == 0) {
            ownerWeis = 0;
-           amount = amount / 2;
        } else {
            ownerWeis = 1;
-           amount = (amount - 1) / 2;
        }
-       address(recipients[0].holder).transfer(amount);
-       emit LogEtherSended(amount);
+       address(recipients[0].holder).transfer(msg.value / 2);
+       address(recipients[1].holder).transfer(msg.value / 2);
+
+       emit LogEtherSended(msg.value);
        emit LogEtherChecked(recipients[0].holder.balance, recipients[1].holder.balance);
    }
 
-    function getBalance() public view returns (uint) {
+    function getBalanceBob() public view returns (uint myNumber) {
 
-        return address(recipients[0].holder);
+
+        return address(uint160(recipients[0].holder)).balance;
     }
+
+
 
 }

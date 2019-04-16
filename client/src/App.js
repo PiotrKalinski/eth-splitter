@@ -5,6 +5,16 @@ import getWeb3 from "./utils/getWeb3";
 
 import "./App.css";
 
+const promisify = (inner) =>
+  new Promise((resolve, reject) =>
+    inner((err, res) => {
+      if (err) { reject(err) }
+
+      resolve(res);
+    })
+  );
+
+
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
@@ -39,16 +49,16 @@ class App extends Component {
     }
   };
 
+  
+
   runExample = async () => {
     const { accounts, contract, splitter, web3 } = this.state;
-    var alice = await web3.eth.getBalance(accounts[0]);
-    var bob = web3.eth.getBalance(accounts[1]);
-    var carol = web3.eth.getBalance(accounts[2]);
     // console.log(alice, bob, carol)
     // Stores a given value, 5 by default.
-    console.log('asssssssssssd', splitter.methods)
-    const sperma = await splitter.methods.getBalance().call()
-    console.log('sperma', sperma)
+    console.log('balance', splitter)
+
+    const balance = await splitter.methods.getBalanceBob().call()
+    console.log('balance', balance)
 
 
     await contract.methods.set(5).send({ from: accounts[0] });

@@ -32,15 +32,15 @@
       "signature": "0x6d4ce63c"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/piotrkalinski/dev/gownokody/spli/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/piotrkalinski/dev/gownokody/spli/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x6b27dc1993605f6974ac5ab8473d0f6f6bc4fe3c6e48a0c29c40a3503f2f12c2\",\"urls\":[\"bzzr://387e2e92571c2e705eff018ddc379f7b9486de06dbda916c2908a15f4435a4c3\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060ec8061001f6000396000f3fe6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820ed4e66cb0bb7b515e896f0c3c4c9bc47f94b97999f8083bc0e01dcba1af549b20029",
-  "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820ed4e66cb0bb7b515e896f0c3c4c9bc47f94b97999f8083bc0e01dcba1af549b20029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x6b27dc1993605f6974ac5ab8473d0f6f6bc4fe3c6e48a0c29c40a3503f2f12c2\",\"urls\":[\"bzzr://387e2e92571c2e705eff018ddc379f7b9486de06dbda916c2908a15f4435a4c3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060ec8061001f6000396000f3fe6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820e2e64ae2ea465713d04c608436b7717012212612121fa4eb33bc360f5179248c0029",
+  "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820e2e64ae2ea465713d04c608436b7717012212612121fa4eb33bc360f5179248c0029",
   "sourceMap": "25:194:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:194:1;;;;;;;",
   "deployedSourceMap": "25:194:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;76:59;;8:9:-1;5:2;;;30:1;27;20:12;5:2;76:59:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;76:59:1;;;;;;;;;;;;;;;;;;;;141:76;;8:9:-1;5:2;;;30:1;27;20:12;5:2;141:76:1;;;;;;;;;;;;;;;;;;;;;;;76:59;127:1;114:10;:14;;;;76:59;:::o;141:76::-;177:4;200:10;;193:17;;141:76;:::o",
   "source": "pragma solidity ^0.5.0;\n\ncontract SimpleStorage {\n    uint storedData;\n\n    function set(uint x) public {\n        storedData = x;\n    }\n\n    function get() public view returns (uint) {\n        return storedData;\n    }\n}\n",
-  "sourcePath": "/Users/piotrkalinski/dev/gownokody/spli/contracts/SimpleStorage.sol",
+  "sourcePath": "/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol",
   "ast": {
-    "absolutePath": "/Users/piotrkalinski/dev/gownokody/spli/contracts/SimpleStorage.sol",
+    "absolutePath": "/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         79
@@ -292,7 +292,7 @@
     "src": "0:220:1"
   },
   "legacyAST": {
-    "absolutePath": "/Users/piotrkalinski/dev/gownokody/spli/contracts/SimpleStorage.sol",
+    "absolutePath": "/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         79
@@ -551,12 +551,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x509717d399b42f5C18a454A7dB0E8f2FB164F40B",
-      "transactionHash": "0xcdc3a4657bb404527386217873c7a9f71d8d4739790e637f296a0f2231390879"
+      "address": "0x79a3a5106fF5eFbB77AeA7291CEf038e2caEC402",
+      "transactionHash": "0x3224f8d9f6104b52f55313e59cb206e7a9fa1601697534f34ac393c6d50671c3"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-14T23:44:11.991Z",
+  "updatedAt": "2019-04-16T21:58:19.240Z",
   "devdoc": {
     "methods": {}
   },
