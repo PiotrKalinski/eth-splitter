@@ -9,13 +9,7 @@ contract Splitter {
 
    uint ownerWeis;
    address owner;
-
-   WalletOwner[2] public recipients;
-
-   struct WalletOwner {
-       uint balance;
-       address payable holder;
-   }
+   uint storedData;
 
    modifier validEtherSend {
        require(msg.value > 0);
@@ -26,34 +20,29 @@ contract Splitter {
    event LogEtherSended(uint _owner);
    event LogEtherChecked(uint alice, uint bob);
 
-   constructor(address payable _bob, address payable _carol) public payable {
-       require(_bob != address(0x0));
-       require(_carol != address(0x0));
+   constructor() public payable {
        owner = msg.sender;
-
-       recipients[0].holder = _bob;
-       recipients[1].holder = _carol;
    }
 
-   function sendEther() public validEtherSend payable {
+   function split(address payable _bob, address payable _carol) public validEtherSend payable returns (bool) {
+       require(_bob != address(0x0));
+       require(_carol != address(0x0));
        if (msg.value % 2 == 0) {
            ownerWeis = 0;
        } else {
            ownerWeis = 1;
        }
-       address(recipients[0].holder).transfer(msg.value / 2);
-       address(recipients[1].holder).transfer(msg.value / 2);
+       address(_bob).transfer(msg.value / 2);
+       address(_carol).transfer(msg.value / 2);
 
        emit LogEtherSended(msg.value);
-       emit LogEtherChecked(recipients[0].holder.balance, recipients[1].holder.balance);
+       emit LogEtherChecked(address(_bob).balance, address(_bob).balance);
    }
 
-    function getBalanceBob() public view returns (uint myNumber) {
-
-
-        return address(uint160(recipients[0].holder)).balance;
+    function getBalance(address user) public view returns (uint myNumber) {
+        return address(user).balance;
+        
     }
-
 
 
 }

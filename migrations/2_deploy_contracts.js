@@ -5,5 +5,5 @@ module.exports = function(deployer, network, accounts) {
 
   deployer.deploy(SimpleStorage);
 
-  deployer.deploy(Splitter, accounts[1], accounts[2], {from: accounts[3]});
+  deployer.deploy(Splitter);
 };

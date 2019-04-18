@@ -5,16 +5,6 @@ import getWeb3 from "./utils/getWeb3";
 
 import "./App.css";
 
-const promisify = (inner) =>
-  new Promise((resolve, reject) =>
-    inner((err, res) => {
-      if (err) { reject(err) }
-
-      resolve(res);
-    })
-  );
-
-
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
@@ -39,7 +29,7 @@ class App extends Component {
       );
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance, splitter: SplitterInstance }, this.runExample);
+      this.setState({ web3, accounts, contract: instance, splitter: SplitterInstance, xd: deployedNetwork.address }, this.runExample);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -52,12 +42,14 @@ class App extends Component {
   
 
   runExample = async () => {
-    const { accounts, contract, splitter, web3 } = this.state;
+    const { accounts, contract, splitter } = this.state;
     // console.log(alice, bob, carol)
     // Stores a given value, 5 by default.
     console.log('balance', splitter)
 
-    const balance = await splitter.methods.getBalanceBob().call()
+    const balance = await splitter.methods.getBalance(accounts[0]).call() 
+    // dont know how to deal with this, reciving VM Exception while processing transaction: revert
+    // while things goes smoothly on REMIX IDE
     console.log('balance', balance)
 
 
