@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import SplitterContract from "./contracts/Splitter.json"
 import getWeb3 from "./utils/getWeb3";
+import contract from "truffle-contract"
 
 import "./App.css";
 
@@ -15,7 +15,17 @@ class App extends Component {
 
       // Use web3 to get the user's accounts.
       const accounts = await web3.eth.getAccounts();
+
+      // Truffle-contrct to perform a contract.
+      const splitterContract = contract(SplitterContract);
+
+      splitterContract.setProvider(web3.currentProvider);
+      const contractDeployed = await splitterContract.deployed();
+
       // Get the contract instance.
+
+      //IF WORKS CONNECTION TO WEB3 THEN REMOVE
+      /* 
       const networkId = await web3.eth.net.getId();
 
       const deployedNetwork = SimpleStorageContract.networks[networkId];
@@ -26,10 +36,12 @@ class App extends Component {
       const SplitterInstance = new web3.eth.Contract(
         SplitterContract.abi,
         deployedNetwork && deployedNetwork.address,
-      );
+      ); 
+      */
+      
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance, splitter: SplitterInstance, xd: deployedNetwork.address }, this.runExample);
+      this.setState({ web3, accounts, contract: contractDeployed, splitter: SplitterInstance, }, this.runExample);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -39,7 +51,16 @@ class App extends Component {
     }
   };
 
-  
+  splitEther = async () => {
+    
+    const bobAddress = "0x29bae5316455eeb19cbd07f2f17f3ae8c840bfaa";
+    const carolAddress = "0xb63f88ca1d5fad10131ca2b3b145e735c8111e08";
+    await this.state.contract.splitEther(bob, carol, {
+      from: accounts[0]
+    });
+    console.log("Ether splitter successfully");
+
+  }
 
   runExample = async () => {
     const { accounts, contract, splitter } = this.state;

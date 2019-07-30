@@ -13,8 +13,7 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x60fe47b1"
+      "type": "function"
     },
     {
       "constant": true,
@@ -28,19 +27,18 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x6d4ce63c"
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x6b27dc1993605f6974ac5ab8473d0f6f6bc4fe3c6e48a0c29c40a3503f2f12c2\",\"urls\":[\"bzzr://387e2e92571c2e705eff018ddc379f7b9486de06dbda916c2908a15f4435a4c3\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060ec8061001f6000396000f3fe6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820e2e64ae2ea465713d04c608436b7717012212612121fa4eb33bc360f5179248c0029",
-  "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806360fe47b114604e5780636d4ce63c146085575b600080fd5b348015605957600080fd5b50608360048036036020811015606e57600080fd5b810190808035906020019092919050505060ad565b005b348015609057600080fd5b50609760b7565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820e2e64ae2ea465713d04c608436b7717012212612121fa4eb33bc360f5179248c0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/piotrkalinski/Documents/dev/eth-splitter/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/piotrkalinski/Documents/dev/eth-splitter/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x6b27dc1993605f6974ac5ab8473d0f6f6bc4fe3c6e48a0c29c40a3503f2f12c2\",\"urls\":[\"bzzr://387e2e92571c2e705eff018ddc379f7b9486de06dbda916c2908a15f4435a4c3\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060bd8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820a545df7af4c55af3019e8b8fad42cb8d36c4e9003530db3426c8c85fc5f8b1410029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea165627a7a72305820a545df7af4c55af3019e8b8fad42cb8d36c4e9003530db3426c8c85fc5f8b1410029",
   "sourceMap": "25:194:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:194:1;;;;;;;",
-  "deployedSourceMap": "25:194:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;76:59;;8:9:-1;5:2;;;30:1;27;20:12;5:2;76:59:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;76:59:1;;;;;;;;;;;;;;;;;;;;141:76;;8:9:-1;5:2;;;30:1;27;20:12;5:2;141:76:1;;;;;;;;;;;;;;;;;;;;;;;76:59;127:1;114:10;:14;;;;76:59;:::o;141:76::-;177:4;200:10;;193:17;;141:76;:::o",
+  "deployedSourceMap": "25:194:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:194:1;;;;;;;;;;;;;;;;;;;;;;;;76:59;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;76:59:1;;;;;;;;;;;;;;;;;:::i;:::-;;141:76;;;:::i;:::-;;;;;;;;;;;;;;;;;;;76:59;127:1;114:10;:14;;;;76:59;:::o;141:76::-;177:4;200:10;;193:17;;141:76;:::o",
   "source": "pragma solidity ^0.5.0;\n\ncontract SimpleStorage {\n    uint storedData;\n\n    function set(uint x) public {\n        storedData = x;\n    }\n\n    function get() public view returns (uint) {\n        return storedData;\n    }\n}\n",
-  "sourcePath": "/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol",
+  "sourcePath": "/Users/piotrkalinski/Documents/dev/eth-splitter/contracts/SimpleStorage.sol",
   "ast": {
-    "absolutePath": "/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol",
+    "absolutePath": "/Users/piotrkalinski/Documents/dev/eth-splitter/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         79
@@ -292,7 +290,7 @@
     "src": "0:220:1"
   },
   "legacyAST": {
-    "absolutePath": "/Users/piotrkalinski/dev/gownokody/spli/eth-splitter/contracts/SimpleStorage.sol",
+    "absolutePath": "/Users/piotrkalinski/Documents/dev/eth-splitter/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         79
@@ -545,18 +543,18 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xc67a162635b9967a41199Fa24400F1d3ACb46A81",
-      "transactionHash": "0xe7efdc794ce09fc691b2fd3fd2b3c3f9efbef9794b823efa9bfc428a953e504d"
+      "address": "0xd55C7533e4385bAEb467F91B0495eF672A88eb26",
+      "transactionHash": "0x48a869b69d08323118024254315efc47fc239e53f5be28e3876e091c26c227f8"
     }
   },
-  "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-18T13:06:15.444Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-30T20:30:22.074Z",
   "devdoc": {
     "methods": {}
   },
