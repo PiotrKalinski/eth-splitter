@@ -20,7 +20,9 @@ class App extends Component {
       const splitterContract = contract(SplitterContract);
 
       splitterContract.setProvider(web3.currentProvider);
-      const contractDeployed = await splitterContract.deployed();
+      const contractDeployed = await splitterContract.deployed({
+        value: 1000000
+      });
 
       // Get the contract instance.
 
@@ -41,7 +43,7 @@ class App extends Component {
       
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: contractDeployed, splitter: SplitterInstance, }, this.runExample);
+      this.setState({ web3, accounts : accounts, contract: contractDeployed}, this.splitEther);
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -55,23 +57,27 @@ class App extends Component {
     
     const bobAddress = "0x29bae5316455eeb19cbd07f2f17f3ae8c840bfaa";
     const carolAddress = "0xb63f88ca1d5fad10131ca2b3b145e735c8111e08";
-    await this.state.contract.splitEther(bob, carol, {
-      from: accounts[0]
+    console.log("contract", this.state.contract);
+    await this.state.contract.split(bobAddress, carolAddress, {
+      from: this.state.accounts[0],
+      value: 100000
     });
     console.log("Ether splitter successfully");
 
   }
 
   runExample = async () => {
-    const { accounts, contract, splitter } = this.state;
+    const { accounts, contract} = this.state;
+    console.log("this.state", this.state);
+    console.log("accounts contract", accounts, contract);
     // console.log(alice, bob, carol)
     // Stores a given value, 5 by default.
-    console.log('balance', splitter)
+    console.log('balance', contract)
 
-    const balance = await splitter.methods.getBalance(accounts[0]).call() 
+    const balance = await contract.getBalance(accounts[0]).call() ;
     // dont know how to deal with this, reciving VM Exception while processing transaction: revert
     // while things goes smoothly on REMIX IDE
-    console.log('balance', balance)
+    console.log('balance', balance);
 
 
     await contract.methods.set(5).send({ from: accounts[0] });
