@@ -37,11 +37,10 @@ contract Splitter {
 
        emit LogEtherSended(msg.value);
        emit LogEtherChecked(address(_bob).balance, address(_bob).balance);
+       return true;
    }
 
     function getBalance(address user) public view returns (uint myNumber) {
         return address(user).balance;
     }
-
-
 }
